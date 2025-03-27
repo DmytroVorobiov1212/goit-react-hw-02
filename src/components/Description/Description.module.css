@@ -1,0 +1,29 @@
+.container {
+    max-width: var(--container-max-width);
+    padding: 0 var(--container-padding);
+    margin: 0 auto;
+}
+
+.section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+
+@media (min-width: var(--breakpoint-tablet)) {
+
+    .section {
+        padding: 60px 0;
+    }
+}
+
+@media (min-width: var(--breakpoint-desktop)) {
+
+    .container {
+        max-width: 1320px;
+    }
+}
+
+.title {
+    margin-bottom: 40px;
+}
