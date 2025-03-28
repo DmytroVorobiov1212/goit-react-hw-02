@@ -5,8 +5,8 @@ const Description = () => {
     <div className={s.container}>
       <div className={s.section}>
         <h1 className={s.title}>
-          <span className={s.span}>Sip</span>
-          <span className={s.span}>Happens</span>
+          <span className={s.span}>Sip&nbsp;</span>
+          <span className={s.span}>Happens&nbsp;</span>
           <span className={s.span}>Café</span>
         </h1>
         <p className={s.text}>

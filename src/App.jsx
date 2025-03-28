@@ -20,10 +20,9 @@ function App() {
   });
 
   const updateFeedback = feedbackType => {
-    const stringType = feedbackType.target.textContent;
     setVotingData({
       ...votingData,
-      [stringType]: votingData[stringType] + 1,
+      [feedbackType]: votingData[feedbackType] + 1,
     });
   };
 
@@ -33,8 +32,7 @@ function App() {
   );
 
   const positiveFeedback =
-    totalFeedback > 0 &&
-    Math.round(((votingData.good + votingData.neutral) / totalFeedback) * 100);
+    totalFeedback > 0 && Math.round((votingData.good / totalFeedback) * 100);
 
   const resetFeedback = () => {
     setVotingData({

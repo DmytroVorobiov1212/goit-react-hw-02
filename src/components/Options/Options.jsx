@@ -5,18 +5,18 @@ const Options = ({ btnFeedback, totalFeedback, resetFeedback }) => {
   return (
     <div className={s.container}>
       <div className={clsx(s.section, s.btnFlex)}>
-        <button className={s.btn} onClick={btnFeedback}>
-          good
+        <button className={s.btn} onClick={() => btnFeedback('good')}>
+          Good
         </button>
-        <button className={s.btn} onClick={btnFeedback}>
-          neutral
+        <button className={s.btn} onClick={() => btnFeedback('neutral')}>
+          Neutral
         </button>
-        <button className={s.btn} onClick={btnFeedback}>
-          bad
+        <button className={s.btn} onClick={() => btnFeedback('bad')}>
+          Bad
         </button>
         {totalFeedback > 0 && (
           <button className={s.btn} onClick={resetFeedback}>
-            reset
+            Reset
           </button>
         )}
       </div>
