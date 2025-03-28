@@ -7,7 +7,8 @@ import Notification from './components/Notification/Notification';
 
 function App() {
   const [votingData, setVotingData] = useState(() => {
-    const savedVoting = window.localStorage.getItem('voting');
+    const savedVoting = localStorage.getItem('voting');
+
     if (savedVoting !== null) {
       return JSON.parse(savedVoting);
     }
@@ -44,7 +45,7 @@ function App() {
   };
 
   useEffect(() => {
-    window.localStorage.setItem('voting', JSON.stringify(votingData));
+    localStorage.setItem('voting', JSON.stringify(votingData));
   }, [votingData]);
 
   return (

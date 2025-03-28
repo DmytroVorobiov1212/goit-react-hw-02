@@ -4,11 +4,21 @@ const Feedback = ({ voting, totalFeedback, positiveFeedback }) => {
   return (
     <div className={s.container}>
       <ul className={s.section}>
-        <li>Good: {voting.good}</li>
-        <li>Neutral: {voting.neutral}</li>
-        <li>Bad: {voting.bad}</li>
-        <li>Total: {totalFeedback}</li>
-        <li>Positive: {positiveFeedback}%</li>
+        <li>
+          <span className={s.span}>Good</span>: {voting.good}
+        </li>
+        <li>
+          <span className={s.span}>Neutral</span>: {voting.neutral}
+        </li>
+        <li>
+          <span className={s.span}>Bad</span>: {voting.bad}
+        </li>
+        <li>
+          <span className={s.span}>Total</span>: {totalFeedback}
+        </li>
+        <li>
+          <span className={s.span}>Positive</span>: {positiveFeedback}%
+        </li>
       </ul>
     </div>
   );
